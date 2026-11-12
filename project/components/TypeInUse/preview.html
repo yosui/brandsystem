@@ -1,0 +1,59 @@
+<!-- @dsCard group="Patterns" height=640 subtitle="ホーム画面での3書体の組み方" -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; background: var(--surface); font-family: var(--font-text); }
+  .stage { display: flex; justify-content: center; padding: 24px 0; }
+  .phone { width: 320px; background: var(--bg); border-radius: 28px; padding: 22px 18px; position: relative; overflow: hidden; box-sizing: border-box; }
+  .mark { position: absolute; right: -36px; top: -28px; width: 190px; height: 130px; }
+  .mark .j { fill: var(--jade); } .mark .v { fill: var(--violet); } .mark .o { fill: var(--overlap); }
+  .rel { position: relative; }
+  p { margin: 0; }
+  .ink { color: var(--ink); } .muted { color: var(--ink-muted); } .ov { color: var(--overlap); }
+  .card { background: var(--surface); border-radius: var(--radius-sm); box-shadow: var(--ring); padding: var(--space-4); margin-top: var(--space-6); }
+  .row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-top: 1px solid var(--hairline); }
+  .row:first-of-type { border-top: 0; }
+  .tnum { font-variant-numeric: tabular-nums; }
+  .btns { display: flex; gap: var(--space-2); margin-top: var(--space-4); }
+  .btn { flex: 1; text-align: center; padding: 10px 0 12px; border-radius: var(--radius-pill); }
+  .primary { background: var(--jade); color: var(--ink); }
+  .secondary { background: var(--fill-subtle); color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="stage"><div class="phone">
+  <svg class="mark" viewBox="0 0 190 130" aria-hidden="true">
+    <defs><clipPath id="vc"><circle cx="130" cy="72" r="58"/></clipPath></defs>
+    <circle class="j" cx="70" cy="58" r="58"/>
+    <circle class="v" cx="130" cy="72" r="58"/>
+    <circle class="o" cx="70" cy="58" r="58" clip-path="url(#vc)"/>
+  </svg>
+  <p class="voice-m ink rel">Good morning</p>
+  <p class="amount-hero ink rel" style="margin-top:8px">¥128,000</p>
+  <p class="label muted rel" style="margin-top:2px">総残高</p>
+
+  <div class="card">
+    <p class="ja-h2 ink">お金を動かそう。</p>
+    <p class="body muted" style="margin-top:2px">手数料は表示どおり。隠れたコストなし。</p>
+    <div class="row" style="margin-top:8px;border-top:1px solid var(--hairline)">
+      <span class="label muted">USD → JPY</span><span class="amount-l ov">151.42</span>
+    </div>
+  </div>
+
+  <div class="btns">
+    <span class="btn primary button">Send</span>
+    <span class="btn secondary button">Receive</span>
+  </div>
+
+  <div class="card">
+    <p class="ja-h3 ink">最近の取引</p>
+    <div class="row"><span class="body ink">山田 花子</span><span class="figure tnum ink">−¥12,400</span></div>
+    <div class="row"><span class="body ink">Amazon</span><span class="figure tnum ink">−¥3,980</span></div>
+    <div class="row"><span class="body ink">給与</span><span class="figure tnum ink">+¥328,000</span></div>
+    <p class="caption muted" style="margin-top:6px">為替レートは 11:42 時点</p>
+  </div>
+</div></div>
+</body>
+</html>

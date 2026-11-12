@@ -1,0 +1,20 @@
+<!-- @dsCard group="Layout" height=520 subtitle="明るい → 淡い色付き → 暗い の切り替え" -->
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+body{margin:0;font-family:var(--font-text);color:var(--ink)}
+p{margin:0}
+.hero{background:var(--bg);padding:48px 24px 0;text-align:center;position:relative;overflow:hidden;height:210px;box-sizing:border-box}
+.hero .cta{display:inline-flex;margin-top:16px;background:var(--jade);color:var(--ink);border-radius:var(--radius-pill);padding:11px 24px 13px}
+.mark{position:absolute;left:50%;bottom:-70px;transform:translateX(-50%);width:200px;height:120px}
+.j{fill:var(--jade)}.v{fill:var(--violet)}.o{fill:var(--overlap)}
+.tint{background:var(--jade-tint);padding:32px 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.tint .n{color:var(--jade-text)}
+.dark{background:var(--ink);color:var(--on-ink);padding:32px 24px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.dark .box{background:var(--surface);color:var(--ink);border-radius:var(--radius-sm);padding:16px 20px}
+.m{color:var(--ink-muted)}
+</style></head><body>
+<div class="hero"><p class="display-l">MONEY WITHOUT WALLS.</p><span class="cta button">Get started</span>
+<svg class="mark" viewBox="0 0 200 120" aria-hidden="true"><defs><clipPath id="sv"><circle cx="128" cy="70" r="64"/></clipPath></defs><circle class="j" cx="72" cy="58" r="64"/><circle class="v" cx="128" cy="70" r="64"/><circle class="o" cx="72" cy="58" r="64" clip-path="url(#sv)"/></svg></div>
+<div class="tint"><div><p class="amount-l n">60+</p><p class="body m">送れる通貨</p></div><div><p class="amount-l n">1日</p><p class="body m">たいていの着金まで</p></div><div><p class="amount-l n">0円</p><p class="body m">隠れたコスト</p></div></div>
+<div class="dark"><div><p class="voice-l">Send in seconds.</p><p class="body" style="color:var(--on-ink)">送る前に、届く金額がわかります。</p></div><div class="box"><p class="label m">受取人に届く金額</p><p class="amount-l">$660.42</p></div></div>
+</body></html>

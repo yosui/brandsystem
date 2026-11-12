@@ -1,0 +1,43 @@
+<!-- @dsCard height=320 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; }
+  body { background: var(--bg); }
+  .cover { position: relative; width: 960px; height: 320px; overflow: hidden; background: var(--bg); }
+  .art { position: absolute; left: 0; top: 0; width: 960px; height: 320px; }
+  .ink { fill: var(--ink); }
+  .jade { fill: var(--jade); }
+  .violet { fill: var(--violet); }
+  .overlap { fill: var(--overlap); }
+  .tint { fill: var(--surface); }
+  .text { position: absolute; left: 48px; bottom: 40px; max-width: 440px; }
+  .name { margin: 0; font-family: var(--font-display); font-weight: 900; font-size: 104px; line-height: 0.95; color: var(--ink); }
+  .tag { margin: 12px 0 0; font-family: var(--font-text); font-size: 14px; line-height: 1.5; color: var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+  <svg class="art" viewBox="0 0 960 320" aria-hidden="true">
+    <!--
+      blocks: ink slab 160×320 (10×space-4 wide, bleeds right), jade disc r128 and violet disc r128 (8×space-4), overlap lens, surface tint disc r24 (space-6)
+      arrangement: one tall slab bleeding off the right edge with two overlapping discs crossing onto it
+      pattern: literal motif — the brand's two overlapping circles, whose intersection is the overlap token; chosen because the overlap colour is the brand's signature
+      steps and radii: space-4 (16px) multiples for positions, discs at half their short side, slab square (no radius)
+    -->
+    <defs><clipPath id="violet-clip"><circle cx="784" cy="176" r="128"/></clipPath></defs>
+    <rect class="ink" x="800" y="0" width="160" height="320"/>
+    <circle class="jade" cx="640" cy="160" r="128"/>
+    <circle class="violet" cx="784" cy="176" r="128"/>
+    <circle class="overlap" cx="640" cy="160" r="128" clip-path="url(#violet-clip)"/>
+    <circle class="tint" cx="896" cy="48" r="24"/>
+  </svg>
+  <div class="text">
+    <p class="name">Brand<br>System</p>
+    <p class="tag">数字は硬く、言葉は人懐っこく。</p>
+  </div>
+</div>
+</body>
+</html>

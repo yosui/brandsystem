@@ -1,0 +1,16 @@
+<!-- @dsCard group="Brand" height=200 subtitle="重なる2つの円。3つの地と最小サイズ" -->
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+body{margin:0;background:var(--surface);font-family:var(--font-text)}
+.row{display:flex;gap:16px;padding:20px;align-items:flex-end;flex-wrap:wrap}
+.tile{width:150px;height:120px;border-radius:var(--radius-card);display:flex;align-items:center;justify-content:center}
+.b{background:var(--bg)}.s{background:var(--surface);border:1px solid var(--hairline)}.i{background:var(--ink)}
+.j{fill:var(--jade)}.v{fill:var(--violet)}.o{fill:var(--overlap)}
+.cap{font-size:12px;color:var(--ink-muted);margin-top:6px}
+</style></head><body>
+<div class="row">
+<div><div class="tile b"><svg width="96" height="64" viewBox="0 0 96 64" aria-label="ブランドマーク"><defs><clipPath id="c1"><circle cx="61" cy="36" r="27"/></clipPath></defs><circle class="j" cx="32" cy="28" r="27"/><circle class="v" cx="61" cy="36" r="27"/><circle class="o" cx="32" cy="28" r="27" clip-path="url(#c1)"/></svg></div><div class="cap">bg の上</div></div>
+<div><div class="tile s"><svg width="96" height="64" viewBox="0 0 96 64" aria-hidden="true"><defs><clipPath id="c2"><circle cx="61" cy="36" r="27"/></clipPath></defs><circle class="j" cx="32" cy="28" r="27"/><circle class="v" cx="61" cy="36" r="27"/><circle class="o" cx="32" cy="28" r="27" clip-path="url(#c2)"/></svg></div><div class="cap">surface の上</div></div>
+<div><div class="tile i"><svg width="96" height="64" viewBox="0 0 96 64" aria-hidden="true"><defs><clipPath id="c3"><circle cx="61" cy="36" r="27"/></clipPath></defs><circle class="j" cx="32" cy="28" r="27"/><circle class="v" cx="61" cy="36" r="27"/><circle class="o" cx="32" cy="28" r="27" clip-path="url(#c3)"/></svg></div><div class="cap">ink の上</div></div>
+<div><div class="tile b"><svg width="30" height="20" viewBox="0 0 96 64" aria-hidden="true"><defs><clipPath id="c4"><circle cx="61" cy="36" r="27"/></clipPath></defs><circle class="j" cx="32" cy="28" r="27"/><circle class="v" cx="61" cy="36" r="27"/><circle class="o" cx="32" cy="28" r="27" clip-path="url(#c4)"/></svg></div><div class="cap">最小（円の直径16px）</div></div>
+</div></body></html>
